@@ -115,7 +115,7 @@ $(document).ready(function(){
   <% @project.overdue_installments.each do |p| %>
   <li>
   <b>Amount</b> - <%= p.amount %><br/>
-  <b>Date</b> - <%= p.installment_date %>  -  <%= link_to "Pay Now", installments_mark_as_paid_path(installment_id: p.id) %>
+  <b>Date</b> - <%= p.installment_date %>  -  <%= link_to "Pay Now", installments_mark_as_paid_path(installment_id: p.id), class: "btn btn-success" %>
   </li> 
     <% end %>
   </ul>
@@ -125,7 +125,7 @@ $(document).ready(function(){
   <ul>
   <% @project.scheduled_installments.each do |p| %>
   <li>
-  <b>Amount</b> - <%= p.amount %><br/> -  <%= link_to "Pay Now", installments_mark_as_paid_path(installment_id: p.id) %>
+  <b>Amount</b> - <%= p.amount %><br/> -  <%= link_to "Pay Now", installments_mark_as_paid_path(installment_id: p.id), class: "btn btn-success" %>
   <b>Date</b> - <%= p.installment_date %>
   </li> 
     <% end %>
