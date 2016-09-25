@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  installment_type: MyString
+  description: MyText
+  status: MyString
+  installment_date: 2016-09-23
+  project_id: 1
+
+two:
+  amount: 1.5
+  installment_type: MyString
+  description: MyText
+  status: MyString
+  installment_date: 2016-09-23
+  project_id: 1

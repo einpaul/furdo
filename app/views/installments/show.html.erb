@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @installment.amount %>
+</p>
+
+<p>
+  <strong>Installment type:</strong>
+  <%= @installment.installment_type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @installment.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @installment.status %>
+</p>
+
+<p>
+  <strong>Installment date:</strong>
+  <%= @installment.installment_date %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @installment.project_id %>
+</p>
+
+<%= link_to 'Edit', edit_installment_path(@installment) %> |
+<%= link_to 'Back', installments_path %>

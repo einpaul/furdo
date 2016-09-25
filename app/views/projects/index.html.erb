@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-7">
+
+
+<p id="notice"><%= notice %></p>
+
+<div class="page-header"> 
+  <h3>Listing projects</h3>
+</div>
+
+
+<% if @projects.empty? %>
+<p>No Projects Found <p>
+<% else %>
+
+<script>
+$(document).ready(function(){
+    $('#myTable').DataTable();
+});
+
+</script>
+
+<table class = "table table-striped" id="myTable">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Total amount</th>
+      <th>Discount</th>
+      <th>Discount %</th>
+
+      <th>Net amount</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.title %></td>
+        <td><%= project.description %></td>
+        <td><%= project.total_amount %></td>
+        <td><%= project.discount %></td>
+        <td><%= ((project.discount*100)/(project.total_amount)).round(2) %></td>
+
+        <td><%= project.net_amount %></td>
+        <td><%= project.user_id %></td>
+        <td><%= link_to 'Show', project, class: "btn btn-info" %></td>
+        <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', project,class: "btn btn-danger",  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+
+<br>
+
+
+ </div>
+</div>
