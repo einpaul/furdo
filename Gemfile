@@ -6,6 +6,7 @@ gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
+gem 'chartkick'
 
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
